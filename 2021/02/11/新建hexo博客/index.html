@@ -26,9 +26,9 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。 结构目录· &amp;emsp;安装Node.js   · &amp;emsp;安装Git    · &amp;emsp;安装Hexo   · &amp;emsp;连接Github与本地  · &amp;emsp;写文章、发布文章   · &amp;emsp;备份博客源文件   · &amp;emsp;博客源更换主题     安装node.js&amp;emsp;1 、安装N">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-11T01:13:39.854Z">
-<meta property="article:modified_time" content="2021-02-11T02:58:40.372Z">
+<meta property="article:modified_time" content="2021-02-11T03:22:39.679Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Github;Hexo">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/index.html">
@@ -203,7 +203,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Github/" style="font-size: 13px;">Github</a>
+      <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Github-Hexo/" style="font-size: 13px;">Github;Hexo</a>
     </div>
   </div>
 
@@ -305,7 +305,7 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Github/" rel="tag">Github</a>
+	<a class="article-tag-link-link" href="/tags/Github-Hexo/" rel="tag">Github;Hexo</a>
   </span>
 
 
@@ -348,8 +348,8 @@
 <p>&emsp;6、使用 <code>hexo d</code> 上传到Github</p>
 <h4 id="二、连接Github"><a href="#二、连接Github" class="headerlink" title="二、连接Github"></a>二、连接Github</h4><p>&emsp;· 若本地Git未与Github端链接，则进行如下操作  </p>
 <p>&emsp;1、在git命令端输入:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxxxx&quot;    #输入github用户名</span><br><span class="line">git config --global user.email &quot;xxxxxxxxxx&quot;    #输入github绑定邮箱</span><br></pre></td></tr></table></figure>
-<p> &emsp;2、生成密钥SSH key：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;792321264@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxxxx&quot;    #输入github用户名</span><br><span class="line">git config --global user.email &quot;xxxxxx@xxx.com&quot;    #输入github绑定邮箱</span><br></pre></td></tr></table></figure>
+<p> &emsp;2、生成密钥SSH key：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxxx@xxx.com&quot;</span><br></pre></td></tr></table></figure></p>
 <p> &emsp;3、打开 <code>C:\Users\用户\.ssh</code> ，找到 <code>id_rsa.pub</code> ,复制其中内容  </p>
 <p> &emsp;4、打开Github，找到右上角头像 Setting –&gt; SSH  and GPG keys –&gt; New SSH key，<br>&emsp;&emsp;&ensp;输入上步复制的公钥  </p>
 <p> &emsp;5、输入如下内容验证是否成功：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com    </span><br></pre></td></tr></table></figure><br> &emsp;&emsp;#Hi xxxxx! You’ve successfully authenticated <br> &emsp;&emsp;but GitHub does not provide shell access(出现这个成功，其余则失败）</p>
@@ -370,7 +370,8 @@
 <p>&emsp;&emsp;然后git branch -b hexo切换到hexo分支，然后git add .，然后git commit -m “xxx”，最后git push origin hexo提交就行了</p>
 <h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><p>&emsp;1、知道到主题所在仓库，输入如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;tttt-xxxx themes&#x2F;xxxx</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;<em>例如：&gt;git clone <a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a> &emsp;themes/pure</em></p>
+<p>&emsp;&emsp;*例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;cofess&#x2F;hexo-theme-pure themes&#x2F;pure</span><br></pre></td></tr></table></figure>
 <p>&emsp;2、找到基本配置文件修改主题即可，其余需要个性化修改的内容只需到主题配置内修改即可</p>
 
       
