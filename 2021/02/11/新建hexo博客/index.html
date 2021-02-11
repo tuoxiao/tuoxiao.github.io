@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>新建Hexo博客 | Hexo</title>
+  <meta name="description" content="&amp;emsp;&amp;emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。 结构目录· &amp;emsp;安装Node.js   · &amp;emsp;安装Git    · &amp;emsp;安装Hexo   · &amp;emsp;连接Github与本地  · &amp;emsp;写文章、发布文章   · &amp;emsp;备份博客源文件   · &amp;emsp;博客源更换主题     安装node.js&amp;emsp;1 、安装N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新建Hexo博客">
+<meta property="og:url" content="http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。 结构目录· &amp;emsp;安装Node.js   · &amp;emsp;安装Git    · &amp;emsp;安装Hexo   · &amp;emsp;连接Github与本地  · &amp;emsp;写文章、发布文章   · &amp;emsp;备份博客源文件   · &amp;emsp;博客源更换主题     安装node.js&amp;emsp;1 、安装N">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-11T01:13:39.854Z">
+<meta property="article:modified_time" content="2021-02-10T14:16:42.496Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/tuoxiao" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">TuTo</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> ShiYan, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/tuoxiao" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/chuyunsheng2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Github/" style="font-size: 13px;">Github</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/11/%E6%9C%AC%E5%9C%B0%E4%B8%8A%E4%BC%A0github/" class="title">本地github托管</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-11T01:13:39.855Z" itemprop="datePublished">2021-02-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" class="title">新建Hexo博客</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-11T01:13:39.854Z" itemprop="datePublished">2021-02-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/11/%E5%AF%B9hexo%E7%9A%84%E8%AE%A4%E8%AF%86/" class="title">对hexo的认识</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-11T01:13:39.853Z" itemprop="datePublished">2021-02-11</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-新建hexo博客" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      新建Hexo博客
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" class="article-date">
+	  <time datetime="2021-02-11T01:13:39.854Z" itemprop="datePublished">2021-02-11</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Github/" rel="tag">Github</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。</p>
+<h2 id="结构目录"><a href="#结构目录" class="headerlink" title="结构目录"></a>结构目录</h2><p>· &emsp;安装Node.js  </p>
+<p>· &emsp;安装Git   </p>
+<p>· &emsp;安装Hexo  </p>
+<p>· &emsp;连接Github与本地 </p>
+<p>· &emsp;写文章、发布文章  </p>
+<p>· &emsp;备份博客源文件  </p>
+<p>· &emsp;博客源更换主题   </p>
+<hr>
+<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>&emsp;1 、安装<a target="_blank" rel="noopener" href="https://nodejs.org/dist/latest/win-x64/">Node.js</a>  </p>
+<p>&emsp;2、安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，查看版本号  </p>
+<hr>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>&emsp;1、安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git</a>  </p>
+<p>&emsp;2、最后一步添加路径时选择Use Git from the Windows Command Prompt，就可<br>&emsp;&emsp;&ensp;以直接在命令提示符里打开git  </p>
+<p>&emsp;3、安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功    </p>
+<hr>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h4 id="一、新建Hexo"><a href="#一、新建Hexo" class="headerlink" title="一、新建Hexo"></a>一、新建Hexo</h4><p>&emsp;1、在被本地新建一个文件夹，如：<code>D/Learn/Github/Blog</code>  </p>
+<p>&emsp;2、在新建的这个文件夹右键打开 <code>Git bash</code>，输入<code>npm i hexo-cli -g</code>，安装Hexo ，<br>&emsp;&emsp;&ensp;安装完后输入<code>hexo -v</code>验证是否安装成功 </p>
+<p>&emsp;3、输入 <code>hexo init</code> 初始化文件夹  </p>
+<p>&emsp;4、此时使用 <code>hexo g</code> 将所编写的markdodn文件编译为Html文件  </p>
+<p>&emsp;5、使用 <code>hexo s</code>  在本地服务器查看博客  </p>
+<p>&emsp;6、使用 <code>hexo d</code> 上传到Github</p>
+<h4 id="二、连接Github"><a href="#二、连接Github" class="headerlink" title="二、连接Github"></a>二、连接Github</h4><p>&emsp;· 若本地Git未与Github端链接，则进行如下操作  </p>
+<p>&emsp;1、在git命令端输入:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxxxx&quot;    #输入github用户名</span><br><span class="line">git config --global user.email &quot;xxxxxxxxxx&quot;    #输入github绑定邮箱</span><br></pre></td></tr></table></figure>
+<p> &emsp;2、生成密钥SSH key：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;792321264@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p> &emsp;3、打开 <code>C:\Users\用户\.ssh</code> ，找到 <code>id_rsa.pub</code> ,复制其中内容  </p>
+<p> &emsp;4、打开Github，找到右上角头像 Setting –&gt; SSH  and GPG keys –&gt; New SSH key，<br>&emsp;&emsp;&ensp;输入上步复制的公钥  </p>
+<p> &emsp;5、输入如下内容验证是否成功：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com    </span><br></pre></td></tr></table></figure><br> &emsp;&emsp;#Hi xxxxx! You’ve successfully authenticated <br> &emsp;&emsp;but GitHub does not provide shell access(出现这个成功，其余则失败）</p>
+<p>&emsp;&ensp;· 若本地Git已经与Github链接，则只需进行如下操作  </p>
+<p>&emsp;1、安装拓展：此拓展负责链接github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexojs&#x2F;hexo-deployer-git  </span><br></pre></td></tr></table></figure>
+<p>&ensp;&emsp;&ensp;此为之前使用的，目前已经失效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git </span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;若使用第二种安装方式采用一下方法解决：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm un hexo-deployer-git </span><br><span class="line">npm i hexojs&#x2F;hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>&emsp;2、修改基本配置文件_config.yml中的如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>&emsp;3、新建仓库，仓库名必为：<code>username.github.io</code> , 同时勾选<code>ADD a README file</code> </p>
+<p>&emsp;4、依次使用一下命令上传修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h3><p>&emsp;&emsp;有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
+<p>&emsp;&emsp;首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</p>
+<p>&emsp;&emsp;然后git branch -b hexo切换到hexo分支，然后git add .，然后git commit -m “xxx”，最后git push origin hexo提交就行了</p>
+<h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><p>&emsp;1、知道到主题所在仓库，输入如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;tttt-xxxx themes&#x2F;xxxx</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;<em>例如：git clone `<a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a> &emsp;themes/pure</em></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" title="新建Hexo博客" target="_blank" rel="external">http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/tuoxiao" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/tuoxiao" target="_blank"><span class="text-dark">TuTo</span><small class="ml-1x"></small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/02/11/%E6%9C%AC%E5%9C%B0%E4%B8%8A%E4%BC%A0github/" title="本地github托管"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/02/11/%E5%AF%B9hexo%E7%9A%84%E8%AE%A4%E8%AF%86/" title="对hexo的认识"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/tuoxiao" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/chuyunsheng2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>
