@@ -26,7 +26,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。 结构目录· &amp;emsp;安装Node.js   · &amp;emsp;安装Git    · &amp;emsp;安装Hexo   · &amp;emsp;连接Github与本地  · &amp;emsp;写文章、发布文章   · &amp;emsp;备份博客源文件   · &amp;emsp;博客源更换主题     安装node.js&amp;emsp;1 、安装N">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-11T01:13:39.854Z">
-<meta property="article:modified_time" content="2021-02-16T12:41:59.336Z">
+<meta property="article:modified_time" content="2021-02-16T12:45:34.400Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="Hexo">
@@ -382,29 +382,30 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxxxx&quot;            #输入github用户名</span><br><span class="line">git config --global user.email &quot;xxxxxx@xxx.com&quot;    #输入github绑定邮箱  </span><br></pre></td></tr></table></figure>
 <p>&emsp;2、生成密钥SSH key：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    ssh-keygen -t rsa -C &quot;xxxxxx@xxx.com&quot;</span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line">&amp;emsp;3、打开 &#96;C:\Users\用户\.ssh&#96; ，找到 &#96;id_rsa.pub&#96; ,复制其中内容  </span><br><span class="line"></span><br><span class="line">&amp;emsp;4、打开Github，找到右上角头像 Setting --&gt; SSH  and GPG keys --&gt; New SSH key，输入上步复制的公钥  </span><br><span class="line"></span><br><span class="line">&amp;emsp;5、输入如下内容验证是否成功：</span><br></pre></td></tr></table></figure>
-<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>    </p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a>    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp;&amp;emsp;#Hi xxxxx! You&#39;ve successfully authenticated &lt;br&gt; &amp;emsp;&amp;emsp;but GitHub does not provide shell access(出现这个成功，其余则失败）  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**&amp;emsp;&amp;ensp;· 若本地Git已经与Github链接，则只需进行如下操作**  </span><br><span class="line"></span><br><span class="line">&amp;emsp;1、安装拓展：此拓展负责链接github</span><br></pre></td></tr></table></figure>
 <pre><code>npm i hexojs/hexo-deployer-git  
 </code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;ensp;&amp;emsp;&amp;ensp;此为之前使用的，目前已经失效</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;ensp;&amp;emsp;&amp;ensp;此为之前使用的，目前已经失效</span><br></pre></td></tr></table></figure>
 <pre><code>npm i hexo-deployer-git 
 </code></pre>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp;&amp;emsp;若使用第二种安装方式采用一下方法解决：</span><br></pre></td></tr></table></figure>
 <pre><code>npm un hexo-deployer-git 
 npm i hexojs/hexo-deployer-git
 </code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br&gt; </span><br><span class="line"></span><br><span class="line">&amp;emsp;2、修改基本配置文件_config.yml中的如下配置：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;emsp;2、修改基本配置文件_config.yml中的如下配置：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>  deploy:<br>    type: git<br>    repository: <a target="_blank" rel="noopener" href="https://github.com/username/username.github.io">https://github.com/username/username.github.io</a><br>    branch: master</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;emsp;3、新建仓库，仓库名必为：&#96;username.github.io&#96; , 同时勾选&#96;ADD a README file&#96;   </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;emsp;4、依次使用一下命令上传修改：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;emsp;3、新建仓库，仓库名必为：&#96;username.github.io&#96; , 同时勾选&#96;ADD a README file&#96;     </span><br><span class="line"></span><br><span class="line">&amp;emsp;4、依次使用一下命令上传修改：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <pre><code>hexo g
 hexo d
 </code></pre>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">### 备份博客源文件</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;然后git branch -b hexo切换到hexo分支，然后git add .，然后git commit -m &quot;xxx&quot;，最后git push origin hexo提交就行了  </span><br><span class="line">  </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 更换博客主题    </span><br><span class="line"></span><br><span class="line">&amp;emsp;1、知道到主题所在仓库，输入如下：</span><br></pre></td></tr></table></figure>
 <pre><code>git clone https://github.com/username/tttt-xxxx themes/xxxx
 </code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp;&amp;emsp;*例如：</span><br></pre></td></tr></table></figure>
-<p> git clone <a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a> themes/pure</p>
-<pre><code>  
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;*例如：</span><br></pre></td></tr></table></figure>
+<pre><code>git clone https://github.com/cofess/hexo-theme-pure themes/pure
+</code></pre>
+<pre><code>
 
 &amp;emsp;2、找到基本配置文件修改主题即可，其余需要个性化修改的内容只需到主题配置内修改即可
 
