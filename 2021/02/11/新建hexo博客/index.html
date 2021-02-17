@@ -26,7 +26,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;本案例为防止个人博客意外损坏从而使博客无法使用后的自救教程。 结构目录· &amp;emsp;安装Node.js   · &amp;emsp;安装Git    · &amp;emsp;安装Hexo   · &amp;emsp;连接Github与本地  · &amp;emsp;写文章、发布文章   · &amp;emsp;备份博客源文件   · &amp;emsp;博客源更换主题     安装node.js&amp;emsp;1 、安装N">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-11T01:13:39.854Z">
-<meta property="article:modified_time" content="2021-02-16T12:47:32.913Z">
+<meta property="article:modified_time" content="2021-02-17T02:51:03.594Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="Hexo">
@@ -380,36 +380,55 @@
 <p><strong>&emsp;· 若本地Git未与Github端链接，则进行如下操作</strong>  </p>
 <p>&emsp;1、在git命令端输入:  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxxxx&quot;            #输入github用户名</span><br><span class="line">git config --global user.email &quot;xxxxxx@xxx.com&quot;    #输入github绑定邮箱  </span><br></pre></td></tr></table></figure>
-<p>&emsp;2、生成密钥SSH key：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    ssh-keygen -t rsa -C &quot;xxxxxx@xxx.com&quot;</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line"></span><br><span class="line">&amp;emsp;3、打开 &#96;C:\Users\用户\.ssh&#96; ，找到 &#96;id_rsa.pub&#96; ,复制其中内容  </span><br><span class="line"></span><br><span class="line">&amp;emsp;4、打开Github，找到右上角头像 Setting --&gt; SSH  and GPG keys --&gt; New SSH key，输入上步复制的公钥  </span><br><span class="line"></span><br><span class="line">&amp;emsp;5、输入如下内容验证是否成功：</span><br></pre></td></tr></table></figure>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a>    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;#Hi xxxxx! You&#39;ve successfully authenticated &lt;br&gt; &amp;emsp;&amp;emsp;but GitHub does not provide shell access(出现这个成功，其余则失败）  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**&amp;emsp;&amp;ensp;· 若本地Git已经与Github链接，则只需进行如下操作**  </span><br><span class="line"></span><br><span class="line">&amp;emsp;1、安装拓展：此拓展负责链接github</span><br></pre></td></tr></table></figure>
-<pre><code>npm i hexojs/hexo-deployer-git  
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;ensp;&amp;emsp;&amp;ensp;此为之前使用的，目前已经失效</span><br></pre></td></tr></table></figure>
-<pre><code>npm i hexo-deployer-git 
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp;&amp;emsp;若使用第二种安装方式采用一下方法解决：</span><br></pre></td></tr></table></figure>
-<pre><code>npm un hexo-deployer-git 
-npm i hexojs/hexo-deployer-git
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;emsp;2、修改基本配置文件_config.yml中的如下配置：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>  deploy:<br>    type: git<br>    repository: <a target="_blank" rel="noopener" href="https://github.com/username/username.github.io">https://github.com/username/username.github.io</a><br>    branch: master</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;emsp;3、新建仓库，仓库名必为：&#96;username.github.io&#96; , 同时勾选&#96;ADD a README file&#96;     </span><br><span class="line"></span><br><span class="line">&amp;emsp;4、依次使用一下命令上传修改：  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<pre><code>hexo g
-hexo d
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">### 备份博客源文件</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</span><br><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;然后git branch -b hexo切换到hexo分支，然后git add .，然后git commit -m &quot;xxx&quot;，最后git push origin hexo提交就行了  </span><br><span class="line">  </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 更换博客主题    </span><br><span class="line"></span><br><span class="line">&amp;emsp;1、知道到主题所在仓库，输入如下：</span><br></pre></td></tr></table></figure>
-<pre><code>git clone https://github.com/username/tttt-xxxx themes/xxxx
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;emsp;&amp;emsp;*例如：</span><br></pre></td></tr></table></figure>
-<pre><code>git clone https://github.com/cofess/hexo-theme-pure themes/pure
-</code></pre>
-<pre><code>
+<p>&emsp;2、生成密钥SSH key  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxxx@xxx.com&quot;</span><br></pre></td></tr></table></figure>
+<br>
 
-&amp;emsp;2、找到基本配置文件修改主题即可，其余需要个性化修改的内容只需到主题配置内修改即可
+<p>&emsp;3、打开 <code>C:\Users\用户\.ssh</code> ，找到 <code>id_rsa.pub</code> ,复制其中内容</p>
+<br>
 
+<p>&emsp;4、打开Github，找到右上角头像 Setting –&gt; SSH  and GPG keys –&gt; New SSH key，输入上步复制的公钥</p>
+<br>
+
+<p>&emsp;5、输入如下内容验证是否成功：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;#Hi xxxxx! You’ve successfully authenticated,but GitHub does not provide shell access(出现这个成功，其余则失败）  </p>
+<br>
+<br>
+
+<p><strong>&emsp;· 若本地Git已经与Github链接，则只需进行如下操作</strong>  </p>
+<p>&emsp;1、安装拓展：此拓展负责链接github  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexojs&#x2F;hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+
+<p>&ensp;&emsp;&ensp;此为之前使用的，目前已经失效:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git </span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;若使用第二种安装方式采用一下方法解决：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-deployer-git </span><br><span class="line">npm i hexojs&#x2F;hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<br>
+
+<p>&emsp;2、修改基本配置文件_config.yml中的如下配置：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   type: git</span><br><span class="line">   repository: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
+<br>
+
+<p>&emsp;3、新建仓库，仓库名必为：<code>username.github.io</code> , 同时勾选<code>ADD a README file</code>     </p>
+<br>
+
+<p>&emsp;4、依次使用一下命令上传修改：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<br>
+<br>
+
+<h3 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h3><p>&emsp;&emsp;有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
+<p>&emsp;&emsp;首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</p>
+<p>&emsp;&emsp;然后git branch -b hexo切换到hexo分支，然后git add .，然后git commit -m “xxx”，最后git push origin hexo提交就行了  </p>
+<h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><p>&emsp;1、知道到主题所在仓库，输入如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;tttt-xxxx themes&#x2F;xxxx</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;*例如：</p>
+<pre><code>    git clone https://github.com/cofess/hexo-theme-pure themes/pure
 </code></pre>
+<p>&emsp;2、找到基本配置文件修改主题即可，其余需要个性化修改的内容只需到主题配置内修改即可</p>
 
       
     </div>
