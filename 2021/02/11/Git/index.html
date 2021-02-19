@@ -43,6 +43,8 @@
   
   
   
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
 <meta name="generator" content="Hexo 5.3.0"></head>
 
 
@@ -428,6 +430,8 @@
     
   <section id="comments">
   	
+           
+    
   </section>
 
 
@@ -526,6 +530,26 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
    
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    proxy: '{{ theme.gitalk.proxy }}',
+    clientID: '1cbad88565532c535877',
+    clientSecret: '30d7bed8f6445a09fec2e5dc448e94669d913777',
+    repo: 'Gittalk',
+    owner: 'tuoxiao',
+    admin: ['tuoxiao'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
 
 
 
