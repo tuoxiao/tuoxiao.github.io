@@ -28,8 +28,8 @@
 <meta property="article:published_time" content="2021-02-11T01:13:39.854Z">
 <meta property="article:modified_time" content="2021-02-17T03:03:49.128Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Github">
 <meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/02/11/%E6%96%B0%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/index.html">
@@ -43,6 +43,8 @@
   
   
   
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -489,6 +491,8 @@
     
   <section id="comments">
   	
+           
+    
   </section>
 
 
@@ -587,6 +591,26 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
    
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '1cbad88565532c535877',
+    clientSecret: '30d7bed8f6445a09fec2e5dc448e94669d913777',
+    repo: 'Gittalk',
+    owner: 'tuoxiao',
+    admin: ['tuoxiao'],
+    id: md5(location.pathname),
+    distractionFreeMode: false
+    proxy: '<theme.gitalk.proxy>',
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
 
 
 
