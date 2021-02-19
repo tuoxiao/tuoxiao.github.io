@@ -509,12 +509,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   var gitalk = new Gitalk({
     clientID: '1cbad88565532c535877',
     clientSecret: '30d7bed8f6445a09fec2e5dc448e94669d913777',
+    Proxy: '<theme.gitalk.proxy>',
     repo: 'Gittalk',
     owner: 'tuoxiao',
     admin: ['tuoxiao'],
     id: md5(location.pathname),
     distractionFreeMode: true
-    Proxy: '<theme.gitalk.proxy>',
   })
   gitalk.render('comments')
   </script>
