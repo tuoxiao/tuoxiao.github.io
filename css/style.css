@@ -5196,8 +5196,8 @@ table table {
   content: "\e61a";
 }
 
-.icon-bilibili:before {
-  content: "\e62e";
+.icon-cup:before {
+  content: "\e62c";
 }
 
 .icon-share:before {
@@ -5458,6 +5458,10 @@ table table {
 
 .icon-gitee:before {
   content: "\e61d";
+}
+
+.icon-bilibili:before {
+  content: "\e62e";
 }
 
 pre .comment {
