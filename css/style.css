@@ -5456,7 +5456,7 @@ table table {
   content: "\e612";
 }
 
-.icon-bilibili:before {
+.icon-gitee:before {
   content: "\e61d";
 }
 
@@ -6691,6 +6691,7 @@ body.okayNav-loaded {
 
 .social-links {
   list-style: none;
+  padding: 0;
   text-align: left;
 }
 
