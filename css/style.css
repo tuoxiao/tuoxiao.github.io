@@ -5456,9 +5456,10 @@ table table {
   content: "\e612";
 }
 
-.icon-gitee:before {
+.icon-bilibili:before {
   content: "\e61d";
 }
+
 
 pre .comment {
   color: #8e908c;
