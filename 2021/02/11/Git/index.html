@@ -26,9 +26,10 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;在使用hexo之余，由于过多的bug使得我被迫开始了自学git的道路来解决使用hexo中的各种各样的问题。可以说，自己的学习过程全凭兴趣，能走到哪里是哪里。在此我要特别感谢廖雪峰大佬的教程，使我走出了第一步。   一、在Windows上安装git    &amp;emsp;1、在Windows上使用Git，可以从Git官网直接下载安装程序，然后按默认选项安装即可   2、因为Git">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-11T10:12:37.776Z">
-<meta property="article:modified_time" content="2021-02-17T07:59:12.293Z">
+<meta property="article:modified_time" content="2021-02-21T14:48:01.083Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Git">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/02/11/Git/index.html">
@@ -205,7 +206,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/%E4%BA%BA%E7%B1%BB/" style="font-size: 13px;">人类</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 13px;">哲学</a>
+      <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.5px;">Hexo</a> <a href="/tags/%E4%BA%BA%E7%B1%BB/" style="font-size: 13px;">人类</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 13px;">哲学</a>
     </div>
   </div>
 
@@ -233,7 +234,7 @@
                 <a class="category-link" href="/categories/%E6%80%9D%E6%83%B3/">思想</a>
               </p>
               <p class="item-title">
-                <a href="/2021/02/17/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E6%9C%89%E6%84%9F/" class="title">读《乌合之众》有感</a>
+                <a href="/2021/02/17/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E6%9C%89%E6%84%9F/" class="title">《乌合之众》</a>
               </p>
               <p class="item-date">
                 <time datetime="2021-02-17T03:27:02.395Z" itemprop="datePublished">2021-02-17</time>
@@ -342,7 +343,7 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Git/" rel="tag">Git</a>
+	<a class="article-tag-link-link" href="/tags/Git/" rel="tag">Git</a>, <a class="article-tag-link-link" href="/tags/Github/" rel="tag">Github</a>
   </span>
 
 
@@ -378,17 +379,37 @@
 <p>4、给文件提交到仓库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;备注&quot;</span><br></pre></td></tr></table></figure>
 <p><em>·  <code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录</em><br><br>  </p>
-<p>5、查看仓库状态：  </p>
+<h2 id="三、版本回退"><a href="#三、版本回退" class="headerlink" title="三、版本回退"></a>三、版本回退</h2><br>
+
+<p>1、查看仓库状态：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 <br>
-6、查看修改的不同：  
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    git diff example.txt</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">7、显示从最近到最远的提交日志：  </span><br></pre></td></tr></table></figure>
+2、查看修改的不同：  
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    git diff example.txt</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;  </span><br><span class="line"></span><br><span class="line">3、显示从最近到最远的提交日志：  </span><br></pre></td></tr></table></figure>
     git log
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">8、退回修改文档到上一个版本：</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*·可以查看提交历史，以便确定要回退到哪个版本*  </span><br></pre></td></tr></table></figure>
+    git reflog
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*·查看命令历史，以便确定要回到未来的哪个版本*</span><br><span class="line"></span><br><span class="line">&lt;br&gt;  </span><br><span class="line"></span><br><span class="line">4、退回修改文档到上一个版本：</span><br></pre></td></tr></table></figure>
     git reset -hard HEAD^
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  *· Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100*  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;  </span><br><span class="line"></span><br><span class="line">5、删除修改：  </span><br></pre></td></tr></table></figure>
+    git rm example.xx
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 添加远程仓库  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">1、要关联一个远程库，使用命令:  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    git remote add origingit@server-name:path/repo-name.git
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;br&gt;</span><br><span class="line">2、关联后，使用命令:  </span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">    git push -u origin master</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">*·第一次推送master分支的所有内容，此后，每次本地提交后，只要有必要，就可以使用命令 &#96;  git push origin master &#96;推送最新修改*  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;  </span><br><span class="line"></span><br><span class="line">3、克隆远程仓库  </span><br></pre></td></tr></table></figure>
+    git clone git@github.com:michaelliao/gitskills.git
+Cloning into 'gitskills'...
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">## 分支  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;  </span><br><span class="line">创建与合并分支:  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+#查看分支            ：  git branch                                    
+#创建分支            ：  git branch <name>                             
+#切换分支            ：  git checkout <name> 或 git switch <name>  
+#创建并且切换到分支   ：  git checkout -b <name> 或 git switch -c <name>  
+#合并某分支到当前分支 ：  git merge <name>  
+#删除分支            ：  git branch -d <name>
 ```
-* · Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100*
 
+
+
+<h1 id="OVER"><a href="#OVER" class="headerlink" title="OVER"></a>OVER</h1>
       
     </div>
     <div class="article-footer">
@@ -446,7 +467,7 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2021/02/17/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E6%9C%89%E6%84%9F/" title="读《乌合之众》有感"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2021/02/17/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E6%9C%89%E6%84%9F/" title="《乌合之众》"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
