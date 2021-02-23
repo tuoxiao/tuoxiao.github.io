@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="article:published_time" content="2021-02-22T05:47:49.758Z">
-<meta property="article:modified_time" content="2021-02-23T14:23:55.190Z">
+<meta property="article:modified_time" content="2021-02-23T14:37:08.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
@@ -399,12 +399,14 @@
 <p><font color=#0 size=6 face="黑体">三、插入链接或图片</font><br>代码：</p>
 <pre><code>    [点击跳转至百度](http://www.baidu.com)
     ![图片](https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    &lt;www.baidu.com&gt;
 </code></pre>
 <p>效果：  </p>
 <p>1、<a target="_blank" rel="noopener" href="http://www.baidu.com/">点击跳转至百度</a><br><br></p>
 <br>
 
 <p>2、<img src="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p>3、&lt;<a target="_blank" rel="noopener" href="http://www.baidu.com&gt;/">www.baidu.com&gt;</a></p>
 <br>
 
 <br>
@@ -508,10 +510,14 @@ _这里是斜体_
 
 **这里是加粗**
 __这里是加粗__
+
+~~这里是删掉~~  
+&lt;u&gt;这里是下划线&lt;/u&gt;
 </code></pre>
 <p>效果：</p>
 <p><em>这里是斜体</em><br><em>这里是斜体</em></p>
 <p><strong>这里是加粗</strong><br><strong>这里是加粗</strong>  </p>
+<p><del>这里是删掉</del><br><u>这里是下划线</u></p>
 <p><font color=#0 size=6 face="黑体">七、插入代码</font>   </p>
 <p>代码：</p>
 <pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun (x: Int, y: Int): Int &#123;</span><br><span class="line">    return x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -544,6 +550,32 @@ __这里是加粗__
 <td align="center">项目二</td>
 </tr>
 </tbody></table>
+<br>  
+
+<br>
+
+
+<p><font color=#0 size=6 face="黑体">九、脚注</font>   </p>
+<p>代码：</p>
+<pre><code>创建脚注格式类似这样 [^RUNOOB]。
+
+[^RUNOOB]: 【离不开的网】 -- 输出更多好文章！！
+</code></pre>
+<p>效果：  </p>
+<p>创建脚注格式类似这样 [^RUNOOB]。</p>
+<p>[^RUNOOB]: 【离不开的网】 – 输出更多好文章！！  </p>
+<p><font color=#0 size=6 face="黑体">十、数学公式</font></p>
+<pre><code>    $$
+    \mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 =  \begin&#123;vmatrix&#125;
+    \mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\
+    \frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\
+    \frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\
+    \end&#123;vmatrix&#125;
+    $$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;
+    $$
+</code></pre>
+<p>效果：</p>
+<p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>$$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}<br>$$</p>
 
       
     </div>
