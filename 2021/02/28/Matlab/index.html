@@ -18,15 +18,15 @@
   
   
   <title>Matlab学习 | TuTo&#39;Blog</title>
-  <meta name="description" content="MATLAB   认识MALAB常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出mat">
+  <meta name="description" content="MATLAB   一、认识MALAB&amp;emsp;常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab学习">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/02/28/Matlab/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MATLAB   认识MALAB常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出mat">
+<meta property="og:description" content="MATLAB   一、认识MALAB&amp;emsp;常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 qu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-28T06:05:44.617Z">
-<meta property="article:modified_time" content="2021-02-28T07:27:55.147Z">
+<meta property="article:modified_time" content="2021-02-28T07:43:11.305Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -356,8 +356,8 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><font size= 7 color = red ><center>MATLAB</center></font>  </p>
-<p><font size= 6 color = purple ><center>认识MALAB</center></font><br><font size= 5 color = blue >常用命令功能</font>  </p>
+        <p><font size= 7 color = black ><center>MATLAB</center></font>  </p>
+<p><font size= 6 color = purple >一、认识MALAB</font><br>&emsp;<font size= 5 color = red >常用命令功能</font>  </p>
 <table>
 <thead>
 <tr>
@@ -422,13 +422,53 @@
 <td align="center">保存内存变量到指定位置</td>
 </tr>
 </tbody></table>
-<p><font size= 5 color = red >MATLAB计算基础</font> </p>
-<p>· 变量命名规则  </p>
+<p><font size= 6 color = purple >二、MATLAB计算基础</font> </p>
+<p>&emsp;<font size= 5 color = red >变量命名规则</font>   </p>
 <p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
 <p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号； </p>
 <p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
 <p>4、某些常量也可以作为变量使用；  </p>
-<p><font size= 5 color = red >MATLAB默认常量</font><br>|变量名|默认值|<br>|:-:|:-:|<br>|i &amp; j|虚数单位|<br>|pi|圆周率（Π）|<br>|ans|存放最近一次无赋值变量语句的预算结果|<br>|Inf|无穷大|<br>|eps|机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）|<br>|NaN|不定式（0/0，或inf/inf，或超出存储大小的值）|<br>|lasterr|存放最后一次的错误消息|<br>|lastwarn|存放最后一次警告消息|</p>
+<p>&emsp;<font size= 5 color = red >MATLAB默认常量</font> </p>
+<table>
+<thead>
+<tr>
+<th align="center">变量名</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">i &amp; j</td>
+<td align="center">虚数单位</td>
+</tr>
+<tr>
+<td align="center">pi</td>
+<td align="center">圆周率（Π）</td>
+</tr>
+<tr>
+<td align="center">ans</td>
+<td align="center">存放最近一次无赋值变量语句的预算结果</td>
+</tr>
+<tr>
+<td align="center">Inf</td>
+<td align="center">无穷大</td>
+</tr>
+<tr>
+<td align="center">eps</td>
+<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
+</tr>
+<tr>
+<td align="center">NaN</td>
+<td align="center">不定式（0/0，或inf/inf，或超出存储大小的值）</td>
+</tr>
+<tr>
+<td align="center">lasterr</td>
+<td align="center">存放最后一次的错误消息</td>
+</tr>
+<tr>
+<td align="center">lastwarn</td>
+<td align="center">存放最后一次警告消息</td>
+</tr>
+</tbody></table>
 
       
     </div>
