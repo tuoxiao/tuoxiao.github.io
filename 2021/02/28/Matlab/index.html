@@ -30,8 +30,10 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-3.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-4.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-5.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-6.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-15.png">
 <meta property="article:published_time" content="2021-02-28T06:05:44.617Z">
-<meta property="article:modified_time" content="2021-03-04T06:47:52.234Z">
+<meta property="article:modified_time" content="2021-03-04T07:33:23.845Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -520,10 +522,27 @@
 <p><img src="/images/matlab/2-1.png" alt="2-1"></p>
 <p><font size=4 color=red><center>对数组进行访问</center></font><br><img src="/images/matlab/2-2.png" alt="2-2"></p>
 <p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font><br><img src="/images/matlab/2-3.png" alt="2-3">  </p>
-<p>在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算:  </p>
-<p>算术运算：数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
+<br>
+<br>
+<br>  
+<br>
+
+<h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><p>· <strong>在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算:</strong>  </p>
+<p>算术运算：<br>&emsp;&emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
 <p><img src="/images/matlab/2-4.png" alt="2-4"><img src="/images/matlab/2-5.png" alt="2-5">  </p>
-<p><font size=4 color=red></font></p>
+<br>
+<br>
+&emsp;&emsp;通过dot函数可以实现点积运算，其等价于`.*`,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  
+
+<p>&emsp;&emsp;C=dot(A,B)或C=dot(A,B,dim),其中参数dim用于指定内积计算的维数。<br><img src="/images/matlab/2-6.png" alt="2-6"></p>
+<br>
+
+<br>
+
+<h2 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h2><p><font size=4 color=red><center>直接输入</center></font><br><img src="/images/matlab/2-15.png" alt="2-15"><br>*输入表达式将自动计算出结果 </p>
+<br>
+
+<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font><br>|函数|说明|<br>|:-:|:-:|<br>|one(n)|创建一个n x n的1矩阵|<br>|zeros(n)|创建一个n x n的0矩阵|<br>|eye(n)|创建一个n x n的单位矩阵|<br>|magic(n)|创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等|<br>|rand(n)|创建一个n x n的随机矩阵，其元素都在0-1之间随机分布 |<br>|randn(n)|创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数|<br>|hilb(n)|创建一个n x n的hilbert矩阵|</p>
 
       
     </div>
