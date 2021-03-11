@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-7.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-19.png">
 <meta property="article:published_time" content="2021-02-28T06:05:44.617Z">
-<meta property="article:modified_time" content="2021-03-11T02:29:14.329Z">
+<meta property="article:modified_time" content="2021-03-11T02:52:41.717Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -582,7 +582,48 @@
 <h2 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h2><p><font size=4 color=red><center>直接输入</center></font><br><img src="/images/matlab/2-15.png" alt="2-15"><br>*输入表达式将自动计算出结果 </p>
 <br>
 
-<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font><br>|函数|说明|<br>|:-:|:-:|<br>|one(n)|创建一个n x n的1矩阵|<br>|zeros(n)|创建一个n x n的0矩阵|<br>|eye(n)|创建一个n x n的单位矩阵|<br>|magic(n)|创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等|<br>|rand(n)|创建一个n x n的随机矩阵，其元素都在0-1之间随机分布 |<br>|randn(n)|创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数|<br>|hilb(n)|创建一个n x n的hilbert矩阵|<br>|vander([1;2;3;x;y;z;])|矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积|<br><br><br>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数</p>
+<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">one(n)</td>
+<td align="center">创建一个n x n的1矩阵</td>
+</tr>
+<tr>
+<td align="center">zeros(n)</td>
+<td align="center">创建一个n x n的0矩阵</td>
+</tr>
+<tr>
+<td align="center">eye(n)</td>
+<td align="center">创建一个n x n的单位矩阵</td>
+</tr>
+<tr>
+<td align="center">magic(n)</td>
+<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
+</tr>
+<tr>
+<td align="center">rand(n)</td>
+<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
+</tr>
+<tr>
+<td align="center">randn(n)</td>
+<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
+</tr>
+<tr>
+<td align="center">hilb(n)</td>
+<td align="center">创建一个n x n的hilbert矩阵</td>
+</tr>
+<tr>
+<td align="center">vander([1;2;3;x;y;z;])</td>
+<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
+</tr>
+</tbody></table>
+<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数</p>
 <p><font size=4 color=red><center>托普利兹矩阵：</center></font><br><img src="/images/matlab/2-7.png" alt="2-7"></p>
 </br>
 
@@ -593,26 +634,31 @@
 
 <p><font size=4 color=red>矩阵的修改：</font></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v&#x3D;diag(A,k)</span><br></pre></td></tr></table></figure>
-<p>获取矩阵的对角线元素，默认k为0，当k=1时，为主对角线右上的对角线。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    L&#x3D;tria(X,k)</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。  </span><br></pre></td></tr></table></figure>
-<pre><code>L=rot90(A,k)
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将矩阵A逆时针旋转90k°  </span><br></pre></td></tr></table></figure>
-<pre><code>L=fliplr(A)
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将矩阵A实现左右翻转  </span><br></pre></td></tr></table></figure>
-<pre><code>L=flipud(A)
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将矩阵A实现上下翻转  </span><br></pre></td></tr></table></figure>
-<pre><code>L=flipdim(A,dim)
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">· 当 dim&#x3D;1 时，数组上下翻转，相当于函数flipud(A)  </span><br><span class="line">· 当 dim&#x3D;2 时，数组左右翻转，相当于函数fliplr(A)  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;&#x2F;br&gt;</span><br><span class="line"></span><br><span class="line">&lt;font size&#x3D;4 color&#x3D;red&gt;矩阵的块操作：&lt;&#x2F;font&gt;  </span><br></pre></td></tr></table></figure>
-<pre><code>B=repmat(A,m,n)或B=
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;font size&#x3D;4 color&#x3D;red&gt;用户语句输入&lt;&#x2F;font&gt;  </span><br></pre></td></tr></table></figure>
-<pre><code>a=input(&#39;prompt:&#39;)
-</code></pre>
-<p>```<br>功能：以‘prompt:’为提示，等待用户输入特定值，并将其赋给变量a</p>
+<p>获取矩阵的对角线元素，默认k为0，当k=1时，为主对角线右上的对角线。<br><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;tria(X,k)</span><br></pre></td></tr></table></figure>
+<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;rot90(A,k)</span><br></pre></td></tr></table></figure>
+<p>将矩阵A逆时针旋转90k°<br><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;fliplr(A)</span><br></pre></td></tr></table></figure>
+<p>将矩阵A实现左右翻转  </p>
+<br>  
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;flipud(A)</span><br></pre></td></tr></table></figure>
+将矩阵A实现上下翻转  
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;flipdim(A,dim)</span><br></pre></td></tr></table></figure>
+<p>· 当 dim=1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim=2 时，数组左右翻转，相当于函数fliplr(A)</p>
+<br>
+</br>  
+
+<p><font size=4 color=red>矩阵的块操作：</font>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B&#x3D;repmat(A,m,n)或B&#x3D;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+<p><font size=4 color=red>用户语句输入</font>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;input(&#39;prompt:&#39;)</span><br></pre></td></tr></table></figure>
+<p>功能：以‘prompt:’为提示，等待用户输入特定值，并将其赋给变量a</p>
 
       
     </div>
