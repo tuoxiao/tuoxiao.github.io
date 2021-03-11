@@ -17,10 +17,10 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Matlab学习 | TuTo&#39;Blog</title>
+  <title>Matlab基础 | TuTo&#39;Blog</title>
   <meta name="description" content="MATLAB   一、认识MALAB常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matlab学习">
+<meta property="og:title" content="Matlab基础">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/02/28/Matlab/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="MATLAB   一、认识MALAB常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出m">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-7.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-19.png">
 <meta property="article:published_time" content="2021-02-28T06:05:44.617Z">
-<meta property="article:modified_time" content="2021-03-11T03:40:39.496Z">
+<meta property="article:modified_time" content="2021-03-11T07:45:51.522Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -245,7 +245,7 @@
                 <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
               </p>
               <p class="item-title">
-                <a href="/2021/02/28/Matlab/" class="title">Matlab学习</a>
+                <a href="/2021/02/28/Matlab/" class="title">Matlab基础</a>
               </p>
               <p class="item-date">
                 <time datetime="2021-02-28T06:05:44.617Z" itemprop="datePublished">2021-02-28</time>
@@ -333,7 +333,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Matlab学习
+      Matlab基础
     </h1>
   
 
@@ -656,7 +656,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;rank(A)</span><br></pre></td></tr></table></figure>
 <p>求矩阵的秩  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;trace(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的迹</p>
+<p>求矩阵的迹  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">norm(V)             计算向量V的2范数</span><br><span class="line">norm(V,1)           计算向量V的1范数</span><br><span class="line">norm(V,inf)         计算向量V的无穷范数</span><br></pre></td></tr></table></figure>
+<p>求矩阵的范数  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
+<p>计算范数的条件数  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E&#x3D;eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]&#x3D;eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]&#x3D;eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
+
+
 <br>
 </br>  
 
@@ -678,7 +685,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://tuoxiao.github.io/2021/02/28/Matlab/" title="Matlab学习" target="_blank" rel="external">http://tuoxiao.github.io/2021/02/28/Matlab/</a>
+      <a href="http://tuoxiao.github.io/2021/02/28/Matlab/" title="Matlab基础" target="_blank" rel="external">http://tuoxiao.github.io/2021/02/28/Matlab/</a>
     </li>
     
     <li class="post-copyright-license">
