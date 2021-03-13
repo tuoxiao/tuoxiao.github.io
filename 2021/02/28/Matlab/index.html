@@ -18,12 +18,12 @@
   
   
   <title>Matlab基础 | TuTo&#39;Blog</title>
-  <meta name="description" content="MATLAB MATLAB计算基础 常用命令功能    命令 说明 命令 说明     cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出ma">
+  <meta name="description" content="MATLAB计算基础   1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab基础">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/02/28/Matlab/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MATLAB MATLAB计算基础 常用命令功能    命令 说明 命令 说明     cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出ma">
+<meta property="og:description" content="MATLAB计算基础   1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将光标移至命令行窗口的左上角 exit 退出matlab   clf 清楚图形窗口 quit 退出">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-1.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-2.png">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-7.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/2-19.png">
 <meta property="article:published_time" content="2021-02-28T06:05:44.617Z">
-<meta property="article:modified_time" content="2021-03-13T01:41:44.972Z">
+<meta property="article:modified_time" content="2021-03-13T01:49:04.164Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -366,341 +366,317 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><font size= 7 color = black ><center>MATLAB</center></font></p>
-<p><font size= 5 color = purple >MATLAB计算基础</font><br>
-<font size= 4 color = red ><center>常用命令功能</center></font></p>
+        <p><font size= 7 color = black ><center>MATLAB计算基础</center></font>  </p>
+<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><p><font size= 4 color = red ><center>常用命令功能</center></font>  </p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">说明</th>
+<th align="center">命令</th>
+<th align="center">说明</th>
+<th align="center">命令</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">cd</td>
-<td style="text-align:center">显示或改变当前工作文件夹</td>
-<td style="text-align:center">load</td>
-<td style="text-align:center">加载指定文件的变量</td>
+<tbody><tr>
+<td align="center">cd</td>
+<td align="center">显示或改变当前工作文件夹</td>
+<td align="center">load</td>
+<td align="center">加载指定文件的变量</td>
 </tr>
 <tr>
-<td style="text-align:center">dir</td>
-<td style="text-align:center">显示当前文件夹或指定目录下的文件</td>
-<td style="text-align:center">diary</td>
-<td style="text-align:center">日志文件命令</td>
+<td align="center">dir</td>
+<td align="center">显示当前文件夹或指定目录下的文件</td>
+<td align="center">diary</td>
+<td align="center">日志文件命令</td>
 </tr>
 <tr>
-<td style="text-align:center">clc</td>
-<td style="text-align:center">清除工作窗口中所有显示的内容</td>
-<td style="text-align:center">!</td>
-<td style="text-align:center">调用DOS命令</td>
+<td align="center">clc</td>
+<td align="center">清除工作窗口中所有显示的内容</td>
+<td align="center">!</td>
+<td align="center">调用DOS命令</td>
 </tr>
 <tr>
-<td style="text-align:center">home</td>
-<td style="text-align:center">将光标移至命令行窗口的左上角</td>
-<td style="text-align:center">exit</td>
-<td style="text-align:center">退出matlab</td>
+<td align="center">home</td>
+<td align="center">将光标移至命令行窗口的左上角</td>
+<td align="center">exit</td>
+<td align="center">退出matlab</td>
 </tr>
 <tr>
-<td style="text-align:center">clf</td>
-<td style="text-align:center">清楚图形窗口</td>
-<td style="text-align:center">quit</td>
-<td style="text-align:center">退出matlab</td>
+<td align="center">clf</td>
+<td align="center">清楚图形窗口</td>
+<td align="center">quit</td>
+<td align="center">退出matlab</td>
 </tr>
 <tr>
-<td style="text-align:center">type</td>
-<td style="text-align:center">显示文件内容</td>
-<td style="text-align:center">pack</td>
-<td style="text-align:center">收敛内存碎片</td>
+<td align="center">type</td>
+<td align="center">显示文件内容</td>
+<td align="center">pack</td>
+<td align="center">收敛内存碎片</td>
 </tr>
 <tr>
-<td style="text-align:center">clear</td>
-<td style="text-align:center">清理内存信息</td>
-<td style="text-align:center">hold</td>
-<td style="text-align:center">图形保持开关</td>
+<td align="center">clear</td>
+<td align="center">清理内存信息</td>
+<td align="center">hold</td>
+<td align="center">图形保持开关</td>
 </tr>
 <tr>
-<td style="text-align:center">echo</td>
-<td style="text-align:center">工作窗信息显示开关</td>
-<td style="text-align:center">path</td>
-<td style="text-align:center">显示搜索目录</td>
+<td align="center">echo</td>
+<td align="center">工作窗信息显示开关</td>
+<td align="center">path</td>
+<td align="center">显示搜索目录</td>
 </tr>
 <tr>
-<td style="text-align:center">disp</td>
-<td style="text-align:center">显示变量或文字内容</td>
-<td style="text-align:center">save</td>
-<td style="text-align:center">保存内存变量到指定位置</td>
+<td align="center">disp</td>
+<td align="center">显示变量或文字内容</td>
+<td align="center">save</td>
+<td align="center">保存内存变量到指定位置</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <br>
+
 <br>
-<br>
-<br>
-<p><font size= 4 color = red ><center>MATLAB默认常量</center></font></p>
+
+
+<p><font size= 4 color = red ><center>MATLAB默认常量</center></font> </p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">变量名</th>
-<th style="text-align:center">默认值</th>
+<th align="center">变量名</th>
+<th align="center">默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">i &amp; j</td>
-<td style="text-align:center">虚数单位</td>
+<tbody><tr>
+<td align="center">i &amp; j</td>
+<td align="center">虚数单位</td>
 </tr>
 <tr>
-<td style="text-align:center">pi</td>
-<td style="text-align:center">圆周率（Π）</td>
+<td align="center">pi</td>
+<td align="center">圆周率（Π）</td>
 </tr>
 <tr>
-<td style="text-align:center">ans</td>
-<td style="text-align:center">存放最近一次无赋值变量语句的预算结果</td>
+<td align="center">ans</td>
+<td align="center">存放最近一次无赋值变量语句的预算结果</td>
 </tr>
 <tr>
-<td style="text-align:center">Inf</td>
-<td style="text-align:center">无穷大</td>
+<td align="center">Inf</td>
+<td align="center">无穷大</td>
 </tr>
 <tr>
-<td style="text-align:center">eps</td>
-<td style="text-align:center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
+<td align="center">eps</td>
+<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
 </tr>
 <tr>
-<td style="text-align:center">NaN</td>
-<td style="text-align:center">不定式（0/0，或inf/inf，或超出存储大小的值）</td>
+<td align="center">NaN</td>
+<td align="center">不定式（0/0，或inf/inf，或超出存储大小的值）</td>
 </tr>
 <tr>
-<td style="text-align:center">lasterr</td>
-<td style="text-align:center">存放最后一次的错误消息</td>
+<td align="center">lasterr</td>
+<td align="center">存放最后一次的错误消息</td>
 </tr>
 <tr>
-<td style="text-align:center">lastwarn</td>
-<td style="text-align:center">存放最后一次警告消息</td>
+<td align="center">lastwarn</td>
+<td align="center">存放最后一次警告消息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
-<li>
-<p>1、变量名区分大小写，因此A和a表示的是不同的变量；</p>
+<li><p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
 </li>
-<li>
-<p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号；</p>
+<li><p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号； </p>
 </li>
-<li>
-<p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
+<li><p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
 </li>
-<li>
-<p>4、某些常量也可以作为变量使用；</p>
+<li><p>4、某些常量也可以作为变量使用； </p>
 </li>
 </ul>
+<br>
+
+<br>
+
 <p><font size=4 color=red><center>MATLAB数据显示格式</center></font></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">格式</th>
-<th style="text-align:center">含义</th>
-<th style="text-align:center">*</th>
-<th style="text-align:center">格式</th>
-<th style="text-align:center">含义</th>
+<th align="center">格式</th>
+<th align="center">含义</th>
+<th align="center">*</th>
+<th align="center">格式</th>
+<th align="center">含义</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">format(short)</td>
-<td style="text-align:center">短格式（5位定点数）</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">format lone e</td>
-<td style="text-align:center">长格式e方式</td>
+<tbody><tr>
+<td align="center">format(short)</td>
+<td align="center">短格式（5位定点数）</td>
+<td align="center">*</td>
+<td align="center">format lone e</td>
+<td align="center">长格式e方式</td>
 </tr>
 <tr>
-<td style="text-align:center">format long</td>
-<td style="text-align:center">长格式（15点定位数）</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">format bank</td>
-<td style="text-align:center">2位十进制格式</td>
+<td align="center">format long</td>
+<td align="center">长格式（15点定位数）</td>
+<td align="center">*</td>
+<td align="center">format bank</td>
+<td align="center">2位十进制格式</td>
 </tr>
 <tr>
-<td style="text-align:center">format short e</td>
-<td style="text-align:center">短格式e方程</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">format hex</td>
-<td style="text-align:center">十六进制格式</td>
+<td align="center">format short e</td>
+<td align="center">短格式e方程</td>
+<td align="center">*</td>
+<td align="center">format hex</td>
+<td align="center">十六进制格式</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <br>
-用fprintf函数格式化输出数据  
-* fprintf有一个重大缺陷那就是只能表示复数实部  
+
+
 <table>
 <thead>
 <tr>
-<th style="text-align:center">format string</th>
-<th style="text-align:center">结果</th>
+<th align="center">format string</th>
+<th align="center">结果</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">%d</td>
-<td style="text-align:center">把值作为整数值来处理</td>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">把值作为整数值来处理</td>
 </tr>
 <tr>
-<td style="text-align:center">%e</td>
-<td style="text-align:center">用科学计数法来显示数据</td>
+<td align="center">%e</td>
+<td align="center">用科学计数法来显示数据</td>
 </tr>
 <tr>
-<td style="text-align:center">%f</td>
-<td style="text-align:center">用于格式化浮点数并显示这个数值</td>
+<td align="center">%f</td>
+<td align="center">用于格式化浮点数并显示这个数值</td>
 </tr>
 <tr>
-<td style="text-align:center">%g</td>
-<td style="text-align:center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
+<td align="center">%g</td>
+<td align="center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
 </tr>
 <tr>
-<td style="text-align:center">\n</td>
-<td style="text-align:center">转到新的一行</td>
+<td align="center">\n</td>
+<td align="center">转到新的一行</td>
 </tr>
-</tbody>
-</table>
-</br>  
-</br>
-<h2 id="创建函数">创建函数</h2>
-<p><font size=4 color=red><center>数组的创建与操作</center></font></p>
+</tbody></table>
+<br>
+
+<br>
+
+<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><p><font size=4 color=red><center>数组的创建与操作</center></font>  </p>
 <p><img src="/images/matlab/2-1.png" alt="2-1"></p>
-<p><font size=4 color=red><center>对数组进行访问</center></font><br>
-<img src="/images/matlab/2-2.png" alt="2-2"></p>
-<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font><br>
-<img src="/images/matlab/2-3.png" alt="2-3"></p>
+<p><font size=4 color=red><center>对数组进行访问</center></font><br><img src="/images/matlab/2-2.png" alt="2-2"></p>
+<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font><br><img src="/images/matlab/2-3.png" alt="2-3">  </p>
 <br>
+ 
 <br>
-<br>  
+
+<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><p>· <strong>在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算:</strong>  </p>
+<p>算术运算：<br>&emsp;&emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
+<p><img src="/images/matlab/2-4.png" alt="2-4"><img src="/images/matlab/2-5.png" alt="2-5">  </p>
 <br>
-<h2 id="数组运算">数组运算</h2>
-<p>· <strong>在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算:</strong></p>
-<p>算术运算：<br>
-  数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。</p>
-<p><img src="/images/matlab/2-4.png" alt="2-4"><img src="/images/matlab/2-5.png" alt="2-5"></p>
+
 <br>
+
+<p>&emsp;&emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
+<p>&emsp;&emsp;C=dot(A,B)或C=dot(A,B,dim),其中参数dim用于指定内积计算的维数。<br><img src="/images/matlab/2-6.png" alt="2-6"></p>
 <br>
-&emsp;&emsp;通过dot函数可以实现点积运算，其等价于`.*`,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  
-<p>  C=dot(A,B)或C=dot(A,B,dim),其中参数dim用于指定内积计算的维数。<br>
-<img src="/images/matlab/2-6.png" alt="2-6"></p>
+
 <br>
+
+<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><p><font size=4 color=red><center>直接输入</center></font><br><img src="/images/matlab/2-15.png" alt="2-15"><br>*输入表达式将自动计算出结果 </p>
 <br>
-<h2 id="矩阵的生成">矩阵的生成</h2>
-<p><font size=4 color=red><center>直接输入</center></font><br>
-<img src="/images/matlab/2-15.png" alt="2-15"><br>
-*输入表达式将自动计算出结果</p>
-<br>
-<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font></p>
+
+<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  </p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">函数</th>
-<th style="text-align:center">说明</th>
+<th align="center">函数</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">one(n)</td>
-<td style="text-align:center">创建一个n x n的1矩阵</td>
+<tbody><tr>
+<td align="center">one(n)</td>
+<td align="center">创建一个n x n的1矩阵</td>
 </tr>
 <tr>
-<td style="text-align:center">zeros(n)</td>
-<td style="text-align:center">创建一个n x n的0矩阵</td>
+<td align="center">zeros(n)</td>
+<td align="center">创建一个n x n的0矩阵</td>
 </tr>
 <tr>
-<td style="text-align:center">eye(n)</td>
-<td style="text-align:center">创建一个n x n的单位矩阵</td>
+<td align="center">eye(n)</td>
+<td align="center">创建一个n x n的单位矩阵</td>
 </tr>
 <tr>
-<td style="text-align:center">magic(n)</td>
-<td style="text-align:center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
+<td align="center">magic(n)</td>
+<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
 </tr>
 <tr>
-<td style="text-align:center">rand(n)</td>
-<td style="text-align:center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
+<td align="center">rand(n)</td>
+<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
 </tr>
 <tr>
-<td style="text-align:center">randn(n)</td>
-<td style="text-align:center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
+<td align="center">randn(n)</td>
+<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
 </tr>
 <tr>
-<td style="text-align:center">hilb(n)</td>
-<td style="text-align:center">创建一个n x n的hilbert矩阵</td>
+<td align="center">hilb(n)</td>
+<td align="center">创建一个n x n的hilbert矩阵</td>
 </tr>
 <tr>
-<td style="text-align:center">vander([1;2;3;x;y;z;])</td>
-<td style="text-align:center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
+<td align="center">vander([1;2;3;x;y;z;])</td>
+<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
 </tr>
-</tbody>
-</table>
-<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数</p>
-<p><font size=4 color=red><center>托普利兹矩阵：</center></font><br>
-<img src="/images/matlab/2-7.png" alt="2-7"></p>
+</tbody></table>
+<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数  </p>
+<p><font size=4 color=red><center>托普利兹矩阵：</center></font><br><img src="/images/matlab/2-7.png" alt="2-7"></p>
 </br>
-<p><font size=4 color=red>矩阵的部分删除:</font><br>
-  在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）<br>
-<img src="/images/matlab/2-19.png" alt="2-19"></p>
+
+<p><font size=4 color=red>矩阵的部分删除:</font><br>&emsp;&emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）<br><img src="/images/matlab/2-19.png" alt="2-19">  </p>
 <br>  
+
 </br>  
-<h2 id="矩阵函数：">矩阵函数：</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v&#x3D;diag(A,k)</span><br></pre></td></tr></table></figure>
-<p>获取矩阵的对角线元素，默认k为0，当k=1时，为主对角线右上的对角线。<br>
-<br></p>
+
+<h2 id="5、矩阵函数："><a href="#5、矩阵函数：" class="headerlink" title="5、矩阵函数："></a>5、矩阵函数：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v&#x3D;diag(A,k)</span><br></pre></td></tr></table></figure>
+<p>获取矩阵的对角线元素，默认k为0，当k=1时，为主对角线右上的对角线。<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;tril(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br>
-<br></p>
+<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;triu(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的上三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br>
-<br></p>
+<p>只返回矩阵的上三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;rot90(A,k)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A逆时针旋转90k°<br>
-<br></p>
+<p>将矩阵A逆时针旋转90k°<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;fliplr(A)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A实现左右翻转</p>
+<p>将矩阵A实现左右翻转  </p>
 <br>  
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;flipud(A)</span><br></pre></td></tr></table></figure>
 将矩阵A实现上下翻转  
 <br>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;flipdim(A,dim)</span><br></pre></td></tr></table></figure>
-<p>· 当 dim=1 时，数组上下翻转，相当于函数flipud(A)<br>
-· 当 dim=2 时，数组左右翻转，相当于函数fliplr(A)<br>
-<br></p>
+<p>· 当 dim=1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim=2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B&#x3D;inv(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A的逆矩阵，赋值给B<br>
-<br></p>
+<p>求方阵A的逆矩阵，赋值给B<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;det(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A所对应行列式的函数值<br>
-<br></p>
+<p>求方阵A所对应行列式的函数值<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;rank(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的秩<br>
-<br></p>
+<p>求矩阵的秩<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L&#x3D;trace(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的迹<br>
-<br></p>
+<p>求矩阵的迹<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">norm(V)             计算向量V的2范数</span><br><span class="line">norm(V,1)           计算向量V的1范数</span><br><span class="line">norm(V,inf)         计算向量V的无穷范数</span><br></pre></td></tr></table></figure>
-<p>求矩阵的范数<br>
-<br></p>
+<p>求矩阵的范数<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
-<p>计算范数的条件数<br>
-<br></p>
+<p>计算范数的条件数<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E&#x3D;eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]&#x3D;eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]&#x3D;eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
 <br>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqrtm(A)            计算矩阵A的平方根</span><br><span class="line">logm(A)             计算矩阵A的自然对数</span><br></pre></td></tr></table></figure>
-<p>矩阵的超越函数<br>
-<br></p>
+<p>矩阵的超越函数<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expm(A)             以矩阵A为对数的指数，e^A</span><br></pre></td></tr></table></figure>
-<p>矩阵指数<br>
-<br></p>
+<p>矩阵指数<br><br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B&#x3D;spares(A)         将矩阵A转换为稀疏存储的矩阵B</span><br><span class="line">nnz(B)              返回矩阵B中非0元素的个数</span><br><span class="line">full(B)             返回稀疏矩阵B的原矩阵，即A</span><br><span class="line">spy(B)              显示矩阵A中非零元素分布图</span><br></pre></td></tr></table></figure>
 <ul>
 <li>matlab中存在两种存储方式，完全存储方式和稀疏存储方式。</li>
 </ul>
 <br>
 </br>  
+
 
       
     </div>
