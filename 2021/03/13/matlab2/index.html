@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   
-  <meta name="referrer" content="never">
-  
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
@@ -19,18 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>书单 | TuTo&#39;Blog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="书单">
-<meta property="og:url" content="http://tuoxiao.github.io/books/index.html">
+  <title>MATLAB程序设计 | TuTo&#39;Blog</title>
+  <meta name="description" content="目录 12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件 特点： 1、是一串按用户意图排列而成的MATLAB指令集； 2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。 脚本文件结构： 1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MATLAB程序设计">
+<meta property="og:url" content="http://tuoxiao.github.io/2021/03/13/matlab2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目录 12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件 特点： 1、是一串按用户意图排列而成的MATLAB指令集； 2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。 脚本文件结构： 1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-02-11T13:16:20.978Z">
-<meta property="article:modified_time" content="2021-02-11T13:16:20.978Z">
+<meta property="article:published_time" content="2021-03-13T01:49:33.355Z">
+<meta property="article:modified_time" content="2021-03-13T02:58:03.330Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://tuoxiao.github.io/books/index.html">
+  <link rel="canonical" href="http://tuoxiao.github.io/2021/03/13/matlab2/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -39,13 +40,15 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
   
   
   
 <meta name="generator" content="Hexo 5.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
 
 
-<body class="main-center no-sidebar" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -310,41 +313,137 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-links article-type-list" itemscope="">
-  <header class="article-header">
-    <h1 itemprop="title">书单</h1>
-    <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/233256122/" target="_blank">[我的豆瓣]</a></p>
-    <nav role="navigation" id="nav-main" class="okayNav">
-      <ul id="tabs">
-        <li><a id="reading-tab" href="javascript:show('reading')" rel="external">在读<span id="reading-total"></span></a></li>
-        <li><a id="wish-tab" href="javascript:show('wish')" rel="external">想读<span id="wish-total"></span></a></li>
-        <li><a id="read-tab" href="javascript:show('read')" rel="external">已读<span id="read-total"></span></a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="article-body">
-    <div id="loading">
-      <p>正在加载...</p>
-    </div>
-    <div id="douban">
-      <div id="collections">
-        <div id="reading" class="row hide">
-        </div>
-        <div class="clearfix"></div>
-        <div id="wish" class="row hide">
-        </div>
-        <div class="clearfix"></div>
-        <div id="read" class="row hide">
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-</article>
-
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-matlab2" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MATLAB程序设计
+    </h1>
   
 
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/03/13/matlab2/" class="article-date">
+	  <time datetime="2021-03-13T01:49:33.355Z" itemprop="datePublished">2021-03-13</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/matlab/" rel="tag">matlab</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/03/13/matlab2/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="目录">目录</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、脚本文件</span><br><span class="line">2、程序控制语句</span><br><span class="line">3、函数文件</span><br><span class="line">4、程序调试</span><br></pre></td></tr></table></figure>
+<br>
+<br>
+<h2 id="脚本文件">脚本文件</h2>
+<p><strong>特点：</strong></p>
+<p>1、是一串按用户意图排列而成的MATLAB指令集；</p>
+<p>2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。</p>
+<p><strong>脚本文件结构：</strong></p>
+<p>1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfor关键字查询和help在线帮助使用</p>
+<p>2、编写和修改记录: 与在线帮助文本相隔一个空行，以%开头，记录该文件的作者和日期，版本记录</p>
+<p>3、文件体，与前面注释部分以空行相隔，为脚本文件的主体内容</p>
+<p><strong>For选择结构</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line">    执行语句1</span><br><span class="line">else</span><br><span class="line">    执行语句2</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if 逻辑表达式1</span><br><span class="line">    执行语句1</span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line">    执行语句2</span><br><span class="line">elseif 逻辑表达式3</span><br><span class="line">    执行语句3</span><br><span class="line">elseif xxxx</span><br><span class="line">    xxxx</span><br><span class="line">···</span><br><span class="line">else</span><br><span class="line">    执行语句</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://tuoxiao.github.io/2021/03/13/matlab2/" title="MATLAB程序设计" target="_blank" rel="external">http://tuoxiao.github.io/2021/03/13/matlab2/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/tuoxiao" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/tuoxiao" target="_blank"><span class="text-dark">TuTo</span><small class="ml-1x"></small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81Mjc5MS8yOTI2OA==">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2021/02/28/Matlab/" title="Matlab基础"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
 
 
 </main>
@@ -405,154 +504,27 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-   <script>
-function show(id) {
-  document.getElementById('reading').classList.remove('active');
-  document.getElementById('read').classList.remove('active');
-  document.getElementById('wish').classList.remove('active');
-  document.getElementById('reading').classList.add('hide');
-  document.getElementById('read').classList.add('hide');
-  document.getElementById('wish').classList.add('hide');
 
-  var ele = document.getElementById(id);
-  ele.classList.remove('hide');
-  ele.classList.add('active');
+   
 
-  document.getElementById('reading-tab').classList.remove('active');
-  document.getElementById('read-tab').classList.remove('active');
-  document.getElementById('wish-tab').classList.remove('active');
-  document.getElementById(id + '-tab').classList.add('active');
-};
 
-(function() {
-  var read = [];
-  var wish = [];
-  var reading = [];
 
-  // XHR 获取豆瓣书单数据，数据格式json
-  // function loadDoubanCollections() {
-  //   var xhr = new XMLHttpRequest();
-  //   // https://api.douban.com/v2/book/user/:name/collections
-  //   xhr.open('GET', 'http://7b1fa0.com1.z0.glb.clouddn.com/douban-20170429-1.json', true);
 
-  //   xhr.onload = function() {
-  //     // console.log(this);
-  //     if (this.status >= 200 && this.status < 300) {
-  //       var res = JSON.parse(this.response);
-  //       searchData = res;
-  //       onLoadDouban(searchData);
-  //     } else {
-  //       console.error(this.statusText);
-  //     }
-  //   };
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
-  //   xhr.onerror = function() {
-  //     console.error(this.statusText);
-  //   };
+    if (typeof LivereTower === 'function') { return; }
 
-  //   xhr.send();
-  // }
-  
-  // Ajax 获取豆瓣书单数据，数据格式json
-  function loadDoubanCollections() {
-    var _this = this;
-    // https://api.douban.com/v2/book/user/:name/collections?start=0&count=100
-    var url = "https://api.douban.com/v2/book/user/233256122/collections"
-    $.ajax({
-      url: url,
-      type: 'GET',
-      data: {
-        start:0, // 从哪一条记录开始
-        count:100 // 获取豆瓣书单数据条数
-      },
-      dataType: 'JSONP', //here
-      success: function(data) {
-        // console.log(data);
-        onLoadDouban(data);
-      }
-    });
-  }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
 
-  function onLoadDouban(data) {
-    if (data['count'] > 0) {
-      for (var i = 0; i < data['collections'].length; ++i) {
-        resolveBook(data['collections'][i]);
-      }
-    }
-    render();
-  }
-
-  function resolveBook(book) {
-    if (book['status'] == 'read') {
-      read.push(book);
-    }
-    if (book['status'] == 'wish') {
-      wish.push(book);
-    }
-    if (book['status'] == 'reading') {
-      reading.push(book);
-    }
-  }
-
-  function render() {
-    renderList(read, 'read');
-    renderList(wish, 'wish');
-    renderList(reading, 'reading');
-
-    document.getElementById('reading-total').innerHTML = '(' + reading.length + ')';
-    document.getElementById('read-total').innerHTML = '(' + read.length + ')';
-    document.getElementById('wish-total').innerHTML = '(' + wish.length + ')';
-
-    show('reading');
-    document.getElementById('loading').classList.add('hide');
-  }
-
-  function renderList(list, id) {
-    for (var i = 0; i < list.length; ++i) {
-      var h = renderBook(list[i]);
-      if (i > 0 && i % 4 == 3) {
-        h += '<div class="clearfix"></div>';
-      }
-      document.getElementById(id).innerHTML = document.getElementById(id).innerHTML + h;
-    }
-  }
-
-  function renderBook(book) {
-    var html = '<div class="col-sm-6 col-md-6"><div class="panel panel-default hover-grow"><div class="panel-body">'
-      + '<div class="media media-middle book book-' + book['status'] + '" itemscope itemtype="http://schema.org/Book">' 
-      + '<div class="media-left"><a class="media-middle" target="_blank" href="' + book.book.alt + '" rel="external nofollow noopener noreferrer"><img class="media-object" src="' + book.book.image + '" itemprop="image"/></a></div><div class="media-body">' 
-      + '<h3 class="media-heading" itemprop="name"><a target="_blank" href="' + book.book.alt + '" rel="external nofollow noopener noreferrer">' + book.book.title + '</a></h3>' 
-      + '<p class="meta text-nowrap-1x"><small itemprop="author">' + book.book.author[0] + '</small> / <small itemprop="datePublished">' + book.book.pubdate + '</small> / <small itemprop="ratingValue">' + book.book.rating.average + '分</small></p>' 
-      + '<p class="meta text-nowrap-1x">' + book.updated.substring(0, 10) + resolveRating(book.rating) + resolveTags(book.tags) + '</p>' 
-      + '<div class="comments text-muted text-nowrap-3x" itemprop="comment">' + (book.comment ? book.comment : '') + '</div>' 
-      + '</div>' + '</div>' + '</div>' + '</div>' + '</div>';
-    return html;
-  }
-
-  function resolveRating(rating) {
-    if (rating && rating.value) {
-      return ' / ' + rating.value + '星';
-    }
-    return '';
-  }
-
-  function resolveTags(tags) {
-    if (tags && tags.length > 0) {
-      var html = ' / ';
-      for (var i = 0; i < tags.length; ++i) {
-        html += tags[i] + ' ';
-      }
-      return html;
-    }
-    return '';
-  }
-
-  setTimeout(function() {
-    loadDoubanCollections();
-  }, 0)
-})()
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
 </script>
-
 
 
 
