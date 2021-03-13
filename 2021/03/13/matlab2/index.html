@@ -18,12 +18,12 @@
   
   
   <title>MATLAB程序设计 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件 特点： 1、是一串按用户意图排列而成的MATLAB指令集； 2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。 脚本文件结构： 1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfo">
+  <meta name="description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试     脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB程序设计">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/03/13/matlab2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件 特点： 1、是一串按用户意图排列而成的MATLAB指令集； 2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。 脚本文件结构： 1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfo">
+<meta property="og:description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试     脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-13T01:49:33.355Z">
 <meta property="article:modified_time" content="2021-03-13T02:58:03.330Z">
@@ -356,19 +356,19 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="目录">目录</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、脚本文件</span><br><span class="line">2、程序控制语句</span><br><span class="line">3、函数文件</span><br><span class="line">4、程序调试</span><br></pre></td></tr></table></figure>
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、脚本文件</span><br><span class="line">2、程序控制语句</span><br><span class="line">3、函数文件</span><br><span class="line">4、程序调试</span><br></pre></td></tr></table></figure>
 <br>
+
 <br>
-<h2 id="脚本文件">脚本文件</h2>
-<p><strong>特点：</strong></p>
-<p>1、是一串按用户意图排列而成的MATLAB指令集；</p>
-<p>2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。</p>
-<p><strong>脚本文件结构：</strong></p>
-<p>1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfor关键字查询和help在线帮助使用</p>
-<p>2、编写和修改记录: 与在线帮助文本相隔一个空行，以%开头，记录该文件的作者和日期，版本记录</p>
-<p>3、文件体，与前面注释部分以空行相隔，为脚本文件的主体内容</p>
-<p><strong>For选择结构</strong></p>
+
+<h2 id="脚本文件"><a href="#脚本文件" class="headerlink" title="脚本文件"></a>脚本文件</h2><p><strong>特点：</strong>  </p>
+<p>1、是一串按用户意图排列而成的MATLAB指令集；  </p>
+<p>2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。  </p>
+<p><strong>脚本文件结构：</strong>  </p>
+<p>1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供lookfor关键字查询和help在线帮助使用  </p>
+<p>2、编写和修改记录: 与在线帮助文本相隔一个空行，以%开头，记录该文件的作者和日期，版本记录  </p>
+<p>3、文件体，与前面注释部分以空行相隔，为脚本文件的主体内容  </p>
+<p><strong>For选择结构</strong>  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line">    执行语句1</span><br><span class="line">else</span><br><span class="line">    执行语句2</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if 逻辑表达式1</span><br><span class="line">    执行语句1</span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line">    执行语句2</span><br><span class="line">elseif 逻辑表达式3</span><br><span class="line">    执行语句3</span><br><span class="line">elseif xxxx</span><br><span class="line">    xxxx</span><br><span class="line">···</span><br><span class="line">else</span><br><span class="line">    执行语句</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
       
     </div>
